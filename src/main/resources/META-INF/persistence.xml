@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+ http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0">
+
+	<persistence-unit name="biblioteca">
+		<description>Base de Datos Hibernate simulando una biblioteca
+		</description>
+		<class>entidades.Estancia</class>
+		<class>entidades.Habitacione</class>
+		<class>entidades.HabitacionePK</class>
+		<class>entidades.Hotel</class>
+		
+		<!--<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>entidades.Persona</class>
+		<class>entidades.Autor</class>
+		<class>entidades.Copia</class>
+		<class>entidades.Libro</class>
+		<class>entidades.Copia_Digital</class>
+		<class>entidades.Copia_fisica</class>-->
+
+		<properties>
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/centraa_reservas" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password"
+				value="" />
+
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.cj.jdbc.Driver" />
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MariaDB102Dialect" />
+		</properties>
+		
+	</persistence-unit>
+</persistence>
+
